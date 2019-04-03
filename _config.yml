@@ -17,6 +17,49 @@ shipcloud:
     as_display_names: 'DHL, DHL Express, Deutsche Post, UPS, DPD, Hermes, GLS, MyDPD Business (iloxx), TNT, FedEx, GO!, PARCEL.ONE, Seven Senders und Cargo International'
     as_keys: '"dhl", "dhl_express", "dpag", "ups", "dpd", "hermes", "gls", "iloxx", "tnt", "fedex", "go", "parcel_one", "seven_senders" and "cargo_international"'
     as_keys_array: '"dhl", "dhl_express", "dpag", "ups", "dpd", "hermes", "gls", "iloxx", "tnt", "fedex", "go", "parcel_one", "seven_senders", "cargo_international"'
+    as_list: 
+      - 
+        name: DHL
+        key: dhl
+      - 
+        name: DHL Express
+        key: dhl_express
+      - 
+        name: Deutsche Post
+        key: dpag
+      - 
+        name: UPS
+        key: ups
+      - 
+        name: DPD
+        key: dpd
+      - 
+        name: Hermes
+        key: hermes
+      - 
+        name: GLS
+        key: gls
+      - 
+        name: MyDPD Business (iloxx)
+        key: iloxx
+      - 
+        name: TNT
+        key: tnt
+      - 
+        name: FedEx
+        key: fedex
+      - 
+        name: GO!
+        key: go
+      - 
+        name: PARCEL.ONE
+        key: parcel_one
+      - 
+        name: Seven Senders
+        key: seven_senders
+      - 
+        name: Cargo International
+        key: cargo_international
   supported_services:
     as_keys_array: '"standard", "one_day" , "one_day_early", "cargo_international_express", "ups_express_1200", "dhl_europaket", "returns"'
 
