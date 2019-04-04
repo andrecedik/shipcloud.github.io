@@ -60,11 +60,62 @@ shipcloud:
       - 
         name: Cargo International
         key: cargo_international
-  supported_services:
+    carrier_features:
+      hermes:
+        props:
+          additional_services:
+            - 
+              name: Cash on delivery
+              key: cash_on_delivery
+          package_types:
+            - 
+              name: Bulk
+              key: bulk
+            - 
+              name: Parcel
+              key: parcel
+          services:
+            - 
+              name: Returns
+              key: returns
+            - 
+              name: Standard
+              key: standard
+        hsi:
+          additional_services:
+            - 
+              name: Advance Notice
+              key: advance_notice
+            - 
+              name: Ident Check
+              key: hermes_ident_check
+            - 
+              name: Next Day Delivery
+              key: hermes_next_day
+          package_types:
+            - 
+              name: Bulk
+              key: bulk
+            - 
+              name: Parcel
+              key: parcel
+          services:
+            - 
+              name: ReturnsX
+              key: returns
+            - 
+              name: Standard
+              key: standard
+            - 
+              name: Express
+              key: one_day
+        supported_services:
     as_keys_array: '"standard", "one_day" , "one_day_early", "cargo_international_express", "ups_express_1200", "dhl_europaket", "returns"'
 
 # Build settings
 markdown: kramdown
+# kramdown:
+#   auto_ids: false
 
 apikey: be51608682014a3adf620fc252d63390
 
