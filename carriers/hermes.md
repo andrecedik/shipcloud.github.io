@@ -42,29 +42,7 @@ nav: carriers
 
 ### Field lengths
 {: #props-field-lengths}
-<ul>
-{% for field_length_entries in site.shipcloud.supported_carriers.carrier_features.hermes.props.field_lengths %}
-  <li>
-    {% for field_length_entry_lev1 in field_length_entries %}
-        {% assign second_level_size = field_length_entry_lev1[1] | size %}
-        {% if second_level_size > 1 %}
-            {{ field_length_entry_lev1[0] }}: {{ field_length_entry_lev1[1] }}
-        {% elsif second_level_size == 1%}
-            {{ field_length_entry_lev1[0] }}
-            <ul>
-                {% for field_length_entry_lev2 in field_length_entry_lev1[1] %}
-                    {% if field_length_entry_lev2[1] %}
-                    <li>{{ field_length_entry_lev2[0] }}: {{ field_length_entry_lev2[1] }}</li>
-                    {% else %}
-                    <li>{{ field_length_entry_lev2[0] }}</li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endfor %}
-  </li>
-{% endfor %}
-</ul>
+{% include utils/field_lengths_display.md carrier_name="hermes" carrier_interface="props"%}
 
 ## Hermes Shipping Interface
 
@@ -102,4 +80,4 @@ nav: carriers
 
 ### Field lengths
 {: #hsi-field-lengths}
-
+{% include utils/field_lengths_display.md carrier_name="hermes" carrier_interface="hsi"%}
