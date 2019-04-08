@@ -11,7 +11,7 @@ nav: carriers
 ### Services
 {: #props-services}
 <ul>
-{% for service in site.shipcloud.supported_carriers.carrier_features.hermes.props.services %}
+{% for service in site.data.carriers.hermes.interfaces.props.implementations.shipcloud.services %}
   <li>{{ service.name }} ({{ service.key }})</li>
 {% endfor %}
 </ul>
@@ -19,7 +19,7 @@ nav: carriers
 ### Additional services
 {: #props-additional-services}
 <ul>
-{% for additional_service in site.shipcloud.supported_carriers.carrier_features.hermes.props.additional_services %}
+{% for additional_service in site.data.carriers.hermes.interfaces.props.implementations.shipcloud.additional_services %}
   <li>{{ additional_service.name }} ({{ additional_service.key }})</li>
 {% endfor %}
 </ul>
@@ -27,7 +27,7 @@ nav: carriers
 ### Package types
 {: #props-package-types}
 <ul>
-{% for package_type in site.shipcloud.supported_carriers.carrier_features.hermes.props.package_types %}
+{% for package_type in site.data.carriers.hermes.interfaces.props.implementations.shipcloud.package_types %}
   <li>{{ package_type.name }} ({{ package_type.key }})</li>
 {% endfor %}
 </ul>
@@ -35,7 +35,7 @@ nav: carriers
 ### Label sizes
 {: #props-label-sizes}
 <ul>
-{% for label_size in site.shipcloud.supported_carriers.carrier_features.hermes.props.label_sizes %}
+{% for label_size in site.data.carriers.hermes.interfaces.props.implementations.shipcloud.label_sizes %}
   <li>{{ label_size.name }} ({{ label_size.key }})</li>
 {% endfor %}
 </ul>
@@ -48,8 +48,14 @@ nav: carriers
 
 ### Services
 {: #hsi-services}
-<ul>
+<!-- <ul>
 {% for service in site.shipcloud.supported_carriers.carrier_features.hermes.hsi.services %}
+  <li>{{ service.name }} ({{ service.key }})</li>
+{% endfor %}
+</ul> -->
+
+<ul>
+{% for service in site.data.carriers.hermes.interfaces.hsi.implementations.shipcloud.services %}
   <li>{{ service.name }} ({{ service.key }})</li>
 {% endfor %}
 </ul>
@@ -57,7 +63,7 @@ nav: carriers
 ### Additional services
 {: #hsi-additional-services}
 <ul>
-{% for additional_service in site.shipcloud.supported_carriers.carrier_features.hermes.hsi.additional_services %}
+{% for additional_service in site.data.carriers.hermes.interfaces.hsi.implementations.shipcloud.additional_services %}
   <li>{{ additional_service.name }} ({{ additional_service.key }})</li>
 {% endfor %}
 </ul>
@@ -65,7 +71,7 @@ nav: carriers
 ### Package types
 {: #hsi-package-types}
 <ul>
-{% for package_type in site.shipcloud.supported_carriers.carrier_features.hermes.hsi.package_types %}
+{% for package_type in site.data.carriers.hermes.interfaces.hsi.implementations.shipcloud.package_types %}
   <li>{{ package_type.name }} ({{ package_type.key }})</li>
 {% endfor %}
 </ul>
@@ -73,7 +79,7 @@ nav: carriers
 ### Label sizes
 {: #hsi-label-sizes}
 <ul>
-{% for label_size in site.shipcloud.supported_carriers.carrier_features.hermes.hsi.label_sizes %}
+{% for label_size in site.data.carriers.hermes.interfaces.hsi.implementations.shipcloud.label_sizes %}
   <li>{{ label_size.name }} ({{ label_size.key }})</li>
 {% endfor %}
 </ul>
@@ -81,3 +87,5 @@ nav: carriers
 ### Field lengths
 {: #hsi-field-lengths}
 {% include utils/field_lengths_display.md carrier_name="hermes" carrier_interface="hsi"%}
+
+<!-- {{ site.data.carriers.hermes.interfaces.hsi }} -->

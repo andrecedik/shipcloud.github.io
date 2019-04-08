@@ -1,24 +1,30 @@
-{% assign carrier_specific_field_lengths=site.shipcloud.supported_carriers.carrier_features[include.carrier_name][include.carrier_interface].field_lengths %}
+{% assign carrier_specific_field_lengths=site.data.carriers[include.carrier_name].interfaces[include.carrier_interface].implementations.shipcloud.field_lengths %}
 <ul>
-{% for field_length_entries in carrier_specific_field_lengths %}
+{% for entries_lev1 in carrier_specific_field_lengths %}
   <li>
-    {% for field_length_entry_lev1 in field_length_entries %}
-        {% assign second_level_size = field_length_entry_lev1[1] | size %}
-        {% if second_level_size > 1 %}
-            {{ field_length_entry_lev1[0] }}: {{ field_length_entry_lev1[1] }}
-        {% elsif second_level_size == 1%}
-            {{ field_length_entry_lev1[0] }}
-            <ul>
-                {% for field_length_entry_lev2 in field_length_entry_lev1[1] %}
-                    {% if field_length_entry_lev2[1] %}
-                    <li>{{ field_length_entry_lev2[0] }}: {{ field_length_entry_lev2[1] }}</li>
+    {% if entries_lev1[1].first %}
+        {{ entries_lev1[0] }}
+        <ul>
+            {% for entries_lev2 in entries_lev1[1] %}
+                <li>
+                    {% if entries_lev2[1].first %}
+                        {{ entries_lev2[0] }}
+                        <ul>
+                        {% for entries_lev3 in entries_lev2[1] %}
+                            <li>
+                                {{ entries_lev3[0] }}: {{ entries_lev3[1] }}
+                            </li>
+                        {% endfor %}
+                        </ul>
                     {% else %}
-                    <li>{{ field_length_entry_lev2[0] }}</li>
+                        {{ entries_lev2[0] }}: {{ entries_lev2[1] }}
                     {% endif %}
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {{ entries_lev1[0] }}: {{ entries_lev1[1] }}
+    {% endif %}
   </li>
 {% endfor %}
 </ul>
