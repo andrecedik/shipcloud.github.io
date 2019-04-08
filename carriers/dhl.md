@@ -44,7 +44,7 @@ nav: carriers
 
 ### Field lengths
 {: #dhl-v2-field-lengths}
-{% include utils/field_lengths_display.md carrier_name="dhl" carrier_interface="v2"%}
+{% include utils/json_level_iterator.md entries=site.data.carriers.dhl.interfaces.v2.implementations.shipcloud.field_lengths %}
 
 ## DHL Api V3
 

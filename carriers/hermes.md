@@ -42,7 +42,7 @@ nav: carriers
 
 ### Field lengths
 {: #props-field-lengths}
-{% include utils/field_lengths_display.md carrier_name="hermes" carrier_interface="props"%}
+{% include utils/json_level_iterator.md entries=site.data.carriers.hermes.interfaces.props.implementations.shipcloud.field_lengths %}
 
 ## Hermes Shipping Interface
 
@@ -86,6 +86,6 @@ nav: carriers
 
 ### Field lengths
 {: #hsi-field-lengths}
-{% include utils/field_lengths_display.md carrier_name="hermes" carrier_interface="hsi"%}
+{% include utils/json_level_iterator.md entries=site.data.carriers.hermes.interfaces.hsi.implementations.shipcloud.field_lengths %}
 
 <!-- {{ site.data.carriers.hermes.interfaces.hsi }} -->
