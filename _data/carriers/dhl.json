@@ -71,6 +71,12 @@
                             "key": "A6"
                         }
                     ],
+                    "other_attributes": [
+                        {
+                            "name":  "Additional insurance",
+                            "key": "declared_value"
+                        }
+                    ],
                     "package_types": [
                         {
                             "name": "Bulk shipments",
