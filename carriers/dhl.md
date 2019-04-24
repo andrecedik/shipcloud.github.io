@@ -1,6 +1,7 @@
 ---
 title: DHL @ shipcloud
 nav: carriers
+carrier: dhl
 ---
 
 # DHL

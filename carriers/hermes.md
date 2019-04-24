@@ -1,7 +1,7 @@
 ---
 title: Hermes @ shipcloud
 nav: carriers
-
+carrier: hermes
 ---
 
 # Hermes
