@@ -1,34 +1,37 @@
 <!-- {{page.carrier}} -->
 {% assign interfaces=site.data.carriers[page.carrier].interfaces %}
+{% assign detailed_services = "additional_services, services" | split: ", " %}
 
-<ul>
-    {% for interface in interfaces %}
-    <li>
-        {{interface[1].name}}
-        {% assign interface_name=interface[0] %}
-        {% assign implementations=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud %}
-        <!-- {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.services %} -->
-        <ul>
-            {% for implementation in implementations %}
-                
-                {% assign implementation_name=implementation[0] %}
-                {% if implementation_name != "field_lengths" %}
-                    {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.[implementation_name] %}
-                    <li>
-                        {{implementation_name}}
-                        <ul>
-                            {% for entry in entries %}
-                            <li>
-                                <a href="#{{ entry.key }}">
-                                    {{ entry.name }}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                    {% endif %}
-            {% endfor %}
-        </ul>
-    </li>
-    {% endfor %}
-</ul>
+{% for interface in interfaces %}
+    {{interface[1].name}}
+    {% assign interface_name=interface[0] %}
+    {% assign implementations=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud %}
+    <!-- {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.services %} -->
+    <ul>
+        {% for implementation in implementations %}
+            
+            {% assign implementation_name=implementation[0] %}
+            {% if detailed_services contains implementation_name %}
+                {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.[implementation_name] %}
+                <li>
+                    {{implementation_name}}
+                    <ul>
+                        {% for entry in entries %}
+                        <li>
+                            <a href="#{{ interface_name }}-{{ entry.key | replace: '_', '-' }}">
+                                {{ entry.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li>
+                    <a href="#{{ interface_name }}-{{ implementation_name | replace: '_', '-' }}">
+                        {{ implementation_name }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endfor %}
