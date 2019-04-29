@@ -1,6 +1,6 @@
 <ul>
 {% for entry in include.entries %}
-  <li>{{ entry.name }} ({{ entry.key }})</li>
+  <li>{{ entry.display_name }} ({{ entry.key }})</li>
 {% endfor %}
 </ul>
 

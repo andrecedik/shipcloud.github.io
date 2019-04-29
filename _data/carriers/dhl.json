@@ -3,40 +3,40 @@
     "key": "dhl",
     "interfaces": {
         "v2": {
-            "name": "DHL Api V2.1",
+            "display_name": "DHL Api V2.1",
             "implementations": {
                 "shipcloud": {
                     "additional_services": [
                         {
-                            "name": "Advance notice",
+                            "display_name": "Advance notice",
                             "key": "advance_notice"
                         },
                         {
-                            "name": "Cash on delivery",
+                            "display_name": "Cash on delivery",
                             "key": "cash_on_delivery"
                         },
                         {
-                            "name": "Declared value",
+                            "display_name": "Declared value",
                             "key": "declared_value"
                         },
                         {
-                            "name": "Visual age check",
+                            "display_name": "Visual age check",
                             "key": "visual_age_check"
                         },
                         {
-                            "name": "Preferred delivery time",
+                            "display_name": "Preferred delivery time",
                             "key": "delivery_time"
                         },
                         {
-                            "name": "Premium international",
+                            "display_name": "Premium international",
                             "key": "premium_international"
                         },
                         {
-                            "name": "Ident Check",
+                            "display_name": "Ident Check",
                             "key": "dhl_ident_check"
                         },
                         {
-                            "name": "Endorsment",
+                            "display_name": "Endorsment",
                             "key": "dhl_endorsement"
                         }
                     ],
@@ -63,45 +63,45 @@
                     },
                     "label_sizes": [
                         {
-                            "name":  "DIN A5",
+                            "display_name":  "DIN A5",
                             "key": "A5"
                         },
                         {
-                            "name": "DIN A6",
+                            "display_name": "DIN A6",
                             "key": "A6"
                         }
                     ],
                     "other_attributes": [
                         {
-                            "name":  "Additional insurance",
+                            "display_name":  "Additional insurance",
                             "key": "declared_value"
                         }
                     ],
                     "package_types": [
                         {
-                            "name": "Bulk shipments",
+                            "display_name": "Bulk shipments",
                             "key": "bulk"
                         },
                         {
-                            "name":  "Parcel",
+                            "display_name":  "Parcel",
                             "key": "parcel"
                         }
                     ],
                     "services": [
                         {
-                            "name": "Europaket",
+                            "display_name": "Europaket",
                             "key": "dhl_europaket"
                         },
                         {
-                            "name": "Returns",
+                            "display_name": "Returns",
                             "key": "returns"
                         },
                         {
-                            "name": "Standard",
+                            "display_name": "Standard",
                             "key": "standard"
                         },
                         {
-                            "name":  "Taggleich",
+                            "display_name":  "Taggleich",
                             "key": "same_day"
                         }
                     ]
@@ -109,7 +109,7 @@
             }
         },
         "v3": {
-            "name": "DHL Carrier Connect",
+            "display_name": "DHL Carrier Connect",
             "implementations": {
                 "shipcloud": {
                     "additional_services": [

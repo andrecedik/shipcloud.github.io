@@ -3,23 +3,22 @@
 {% assign detailed_services = "additional_services, services" | split: ", " %}
 
 {% for interface in interfaces %}
-    {{interface[1].name}}
+    {{ interface[1].name }}
     {% assign interface_name=interface[0] %}
     {% assign implementations=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud %}
     <!-- {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.services %} -->
     <ul>
         {% for implementation in implementations %}
-            
             {% assign implementation_name=implementation[0] %}
             {% if detailed_services contains implementation_name %}
                 {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.[implementation_name] %}
                 <li>
-                    {{implementation_name}}
+                    {{ implementation_name | replace: '_', ' ' | capitalize }}
                     <ul>
                         {% for entry in entries %}
                         <li>
                             <a href="#{{ interface_name }}-{{ entry.key | replace: '_', '-' }}">
-                                {{ entry.name }}
+                                {{ entry.display_name }}
                             </a>
                         </li>
                         {% endfor %}
@@ -28,7 +27,7 @@
             {% else %}
                 <li>
                     <a href="#{{ interface_name }}-{{ implementation_name | replace: '_', '-' }}">
-                        {{ implementation_name }}
+                        {{ implementation_name  | replace: '_', ' ' | capitalize}}
                     </a>
                 </li>
             {% endif %}

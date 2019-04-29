@@ -1,4 +1,4 @@
-## {{ site.data.carriers[include.carrier_name].interfaces.[include.carrier_interface].name }}
+## {{ site.data.carriers[include.carrier_name].interfaces.[include.carrier_interface].display_name }}
 
 {% assign entries=site.data.carriers[include.carrier_name].interfaces.[include.carrier_interface].implementations.shipcloud.services %}
 {% if entries.size > 0 %}
