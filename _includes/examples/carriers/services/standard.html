@@ -1,25 +1,16 @@
-#### Premium International
-{: #v2---premium-international}
+The most basic service. Normal ground shipping without any modifier to speed up 
+the shipping time.
 
-Using the additional service
-<a href="https://www.dhl.de/en/paket/information/geschaeftskunden/premium.html" target="_blank" data-proofer-ignore>DHL premium international</a>
-you can reduce international shipping transit times.
-
-__Requirements:__
-
-- You'll have to use your own DHL contract
-- Your DHL contract must be setup for DHL "Ship" (DHL "Versenden")
-
-<div class="panel-group" id="{{include.carrier_interface}}_premium_international_togglebox">
+<div class="panel-group" id="{{include.carrier_interface}}_service_standard_togglebox">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#{{include.carrier_interface}}_premium_international_togglebox" href="#{{include.carrier_interface}}_premium_international_togglebox_collapsable">
+        <a data-toggle="collapse" data-parent="#{{include.carrier_interface}}_service_standard_togglebox" href="#{{include.carrier_interface}}_service_standard_togglebox_collapsable">
           <i class="fas fa-chevron-down"></i> Example
         </a>
       </h4>
     </div>
-    <div id="{{include.carrier_interface}}_premium_international_togglebox_collapsable" class="panel-collapse collapse">
+    <div id="{{include.carrier_interface}}_service_standard_togglebox_collapsable" class="panel-collapse collapse">
       <div class="panel-body">
 {% highlight http %}
 POST https://api.shipcloud.io/v1/shipments
@@ -53,11 +44,6 @@ POST https://api.shipcloud.io/v1/shipments
     "height": 5,
     "type": "parcel"
   },
-  "additional_services": [
-    {
-      "name": "premium_international"
-    }
-  ],
   "carrier": "{{page.carrier}}",
   "service": "standard",
   "create_shipping_label": true

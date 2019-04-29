@@ -17,6 +17,17 @@ __Requirements:__
 - The recipient has to be located in Germany
 - Only available for label size A5
 
+<div class="panel-group" id="{{include.carrier_interface}}_dhl_ident_check_togglebox">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#{{include.carrier_interface}}_dhl_ident_check_togglebox" href="#{{include.carrier_interface}}_dhl_ident_check_togglebox_collapsable">
+          <i class="fas fa-chevron-down"></i> Example
+        </a>
+      </h4>
+    </div>
+    <div id="{{include.carrier_interface}}_dhl_ident_check_togglebox_collapsable" class="panel-collapse collapse">
+      <div class="panel-body">
 {% highlight http %}
 POST https://api.shipcloud.io/v1/shipments
 {% endhighlight %}
@@ -24,15 +35,6 @@ POST https://api.shipcloud.io/v1/shipments
 {% highlight json %}
 {
   "from": {
-    "first_name": "Roger",
-    "last_name": "Receiver",
-    "street": "Receiver Str.",
-    "street_no": "1",
-    "city": "Hamburg",
-    "zip_code": "20535",
-    "country": "DE"
-  },
-  "to": {
     "first_name": "Serge",
     "last_name": "Sender",
     "company": "Sender Corp.",
@@ -40,6 +42,15 @@ POST https://api.shipcloud.io/v1/shipments
     "street_no": "99",
     "zip_code": "20148",
     "city": "Hamburg",
+    "country": "DE"
+  },
+  "to": {
+    "first_name": "Roger",
+    "last_name": "Receiver",
+    "street": "Receiver Str.",
+    "street_no": "1",
+    "city": "Hamburg",
+    "zip_code": "20535",
     "country": "DE"
   },
   "package": {
@@ -60,7 +71,12 @@ POST https://api.shipcloud.io/v1/shipments
       }
     }
   ],
-  "carrier": "dhl",
+  "carrier": "{{page.carrier}}",
+  "service": "standard",
   "create_shipping_label": true
 }
 {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
