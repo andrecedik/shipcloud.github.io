@@ -103,23 +103,6 @@
                     ]
                 }
             }
-        },
-        "v3": {
-            "display_name": "DHL Carrier Connect",
-            "implementations": {
-                "shipcloud": {
-                    "additional_services": [
-                        
-                    ],
-                    "package_types": [
-                        "parcel"
-                    ],
-                    "services": [
-                        "standard", 
-                        "returns"
-                    ]
-                }
-            }
         }
     }
 }
