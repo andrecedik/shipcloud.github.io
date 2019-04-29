@@ -85,16 +85,16 @@
                     ],
                     "services": [
                         {
-                            "display_name": "Europaket",
-                            "key": "dhl_europaket"
+                            "display_name": "Standard",
+                            "key": "standard"
                         },
                         {
                             "display_name": "Returns",
                             "key": "returns"
                         },
                         {
-                            "display_name": "Standard",
-                            "key": "standard"
+                            "display_name": "Europaket",
+                            "key": "dhl_europaket"
                         },
                         {
                             "display_name":  "Taggleich",
