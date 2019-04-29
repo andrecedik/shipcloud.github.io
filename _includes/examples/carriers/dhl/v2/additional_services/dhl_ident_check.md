@@ -20,17 +20,34 @@ __Requirements:__
 {% highlight http %}
 POST https://api.shipcloud.io/v1/shipments
 {% endhighlight %}
+
 {% highlight json %}
 {
-  "carrier": "dhl",
   "from": {
-    // see [1]
+    "first_name": "Roger",
+    "last_name": "Receiver",
+    "street": "Receiver Str.",
+    "street_no": "1",
+    "city": "Hamburg",
+    "zip_code": "20535",
+    "country": "DE"
   },
   "to": {
-    // see [1]
+    "first_name": "Serge",
+    "last_name": "Sender",
+    "company": "Sender Corp.",
+    "street": "Sender Str.",
+    "street_no": "99",
+    "zip_code": "20148",
+    "city": "Hamburg",
+    "country": "DE"
   },
   "package": {
-    // see [2]
+    "weight": 0.5,
+    "length": 20,
+    "width": 15,
+    "height": 5,
+    "type": "parcel"
   },
   "additional_services": [
     {

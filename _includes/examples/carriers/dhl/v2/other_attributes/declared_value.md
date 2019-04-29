@@ -1,14 +1,8 @@
-#### Visual age check
-{: #v2---visual-age-check}
+#### Additional insurance
+{: #v2---declared-value}
 
-When sending goods that are only legally available for people of a specific age, you can request
-the carrier to check the receiver's age visually. Just add the additional service
-`visual_age_check` and either `16` or `18` as its `minimum_age` value.
-
-__Requirements:__
-
-- You need to use your own DHL Ship contract
-- The recipient has to be located in Germany
+DHL is offering you the option of an additional insurance which you can book instead of their normal
+liability. 
 
 {% highlight http %}
 POST https://api.shipcloud.io/v1/shipments
@@ -40,16 +34,12 @@ POST https://api.shipcloud.io/v1/shipments
     "length": 20,
     "width": 15,
     "height": 5,
-    "type": "parcel"
-  },
-  "additional_services": [
-    {
-      "name": "visual_age_check",
-      "properties": {
-        "minimum_age": "16"
-      }
+    "type": "parcel",
+    "declared_value": {
+       "amount": 555.45,
+       "currency": "EUR"
     }
-  ],
+  },
   "carrier": "dhl",
   "create_shipping_label": true
 }

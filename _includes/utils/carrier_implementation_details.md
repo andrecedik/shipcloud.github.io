@@ -4,7 +4,7 @@
 {% if entries.size > 0 %}
 ### Services
 {: #{{include.carrier_interface}}-services}
-{% include utils/carrier_interface_entry_iterator.md entries=entries %}
+{% include utils/carrier_interface_entry_iterator.md entries=entries type='services' carrier_interface=include.carrier_interface %}
 {% endif %}
 
 {% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.additional_services %}
@@ -32,7 +32,7 @@
 {% if entries.size > 0 %}
 ### Other attributes
 {: #{{include.carrier_interface}}-other-attributes}
-{% include utils/carrier_interface_entry_iterator.md entries=entries %}
+{% include utils/carrier_interface_entry_iterator.md entries=entries type='other_attributes' carrier_interface=include.carrier_interface %}
 {% endif %}
 
 {% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.field_lengths %}
