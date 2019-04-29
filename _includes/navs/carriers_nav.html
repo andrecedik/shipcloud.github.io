@@ -15,7 +15,7 @@
             {% if detailed_services contains implementation_name %}
                 {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.[implementation_name] %}
                 <li>
-                    <a href="#{{ interface_name }}-{{ implementation_name }}">
+                    <a href="#{{ interface_name }}-{{ implementation_name | replace: '_', '-' }}">
                         {{ implementation_name | replace: '_', ' ' | capitalize }}
                     </a>
                     <ul class="nav">
