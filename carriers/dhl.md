@@ -6,7 +6,7 @@ carrier: dhl
 
 # DHL
 
-{% include utils/carrier_implementation_details.md carrier_name="dhl" carrier_interface="v2" %}
+{% include utils/carrier_implementation_details.md carrier_interface="v2" %}
 
 ## DHL Api V3
 
