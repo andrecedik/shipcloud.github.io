@@ -1,4 +1,5 @@
-#### DHL - Delivery Time (Preferred Time)
+#### Delivery Time (Preferred Time)
+{: #v2---delivery-time}
 
 With the
 [DHL preferred time service](https://www.dhl.de/en/paket/information/geschaeftskunden/service-wunschzeit.html)

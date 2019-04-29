@@ -5,8 +5,8 @@
 </ul>
 
 {% for entry in include.entries %}
-  {% if include.carrier && include.type %}
-    {% capture include_file %}{% include examples/carriers/{{include.carrier}}/{{include.type}}/{{entry.key}}.md %}{% endcapture %}
+  {% if page.carrier and include.type and include.carrier_interface %}
+{% capture include_file %}{% include examples/carriers/{{ page.carrier }}/{{ include.carrier_interface }}/{{ include.type }}/{{ entry.key }}.md %}{% endcapture %}
 {{ include_file | markdownify | remove: '<p>' | remove: '</p>' }}
   {% endif %}
 {% endfor %}

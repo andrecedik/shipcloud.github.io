@@ -11,7 +11,7 @@
 {% if entries.size > 0 %}
 ### Additional services
 {: #{{include.carrier_interface}}-additional-services}
-{% include utils/carrier_interface_entry_iterator.md entries=entries type='additional_services' carrier=page.carrier %}
+{% include utils/carrier_interface_entry_iterator.md entries=entries type='additional_services' carrier_interface=include.carrier_interface %}
 {% endif %}
 
 {% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.package_types %}

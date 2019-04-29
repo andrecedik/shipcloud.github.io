@@ -16,10 +16,6 @@
                             "key": "cash_on_delivery"
                         },
                         {
-                            "display_name": "Declared value",
-                            "key": "declared_value"
-                        },
-                        {
                             "display_name": "Visual age check",
                             "key": "visual_age_check"
                         },
@@ -37,7 +33,7 @@
                         },
                         {
                             "display_name": "Endorsment",
-                            "key": "dhl_endorsement"
+                            "key": "dhl_endorsment"
                         }
                     ],
                     "field_lengths": {

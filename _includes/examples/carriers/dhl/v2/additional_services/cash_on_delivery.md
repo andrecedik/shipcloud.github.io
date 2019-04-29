@@ -1,4 +1,5 @@
-#### DHL - Cash on delivery
+#### Cash on delivery
+{: #v2---cash-on-delivery}
 
 __Requirements:__
 

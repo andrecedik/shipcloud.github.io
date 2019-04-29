@@ -1,4 +1,6 @@
-#### DHL - Ident Check
+#### Ident Check
+{: #v2---dhl-ident-check}
+
 If you want the carrier to only deliver the shipment to a specific person you can use the DHL ident
 check. DHL will ask the recepient to show them a valid ID. Thus you will be able to minimize fraud,
 only deliver to persons of a certain age (e.g. when sending alcoholic beverages, adult content or

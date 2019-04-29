@@ -1,4 +1,6 @@
-#### DHL - Visual age check
+#### Visual age check
+{: #v2---visual-age-check}
+
 When sending goods that are only legally available for people of a specific age, you can request
 the carrier to check the receiver's age visually. Just add the additional service
 `visual_age_check` and either `16` or `18` as its `minimum_age` value.
