@@ -64,4 +64,3 @@ POST https://api.shipcloud.io/v1/shipments
 {% endhighlight %}
 </div>
 </div>
-
