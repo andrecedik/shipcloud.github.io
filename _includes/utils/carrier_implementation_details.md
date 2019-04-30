@@ -24,31 +24,31 @@
     <tr>
         <td>
             {% assign services_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.services[i] %}
-            <a href="#{{include.carrier_interface}}---{{ services_entry.key | replace: '_', '-' }}">
+            <a href="#{{include.carrier_interface | replace: '_', '-' }}---{{ services_entry.key | replace: '_', '-' }}">
                 {{ services_entry.display_name }}
             </a>
         </td>
         <td>
             {% assign package_type_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.package_types[i] %}
-            <a href="#{{include.carrier_interface}}---{{ package_type_entry.key | replace: '_', '-' }}">
+            <a href="#{{include.carrier_interface | replace: '_', '-' }}---{{ package_type_entry.key | replace: '_', '-' }}">
                 {{ package_type_entry.display_name }}
             </a>
         </td>
         <td>
             {% assign additional_services_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.additional_services[i] %}
-            <a href="#{{include.carrier_interface}}---{{ additional_services_entry.key | replace: '_', '-' }}">
+            <a href="#{{include.carrier_interface | replace: '_', '-' }}---{{ additional_services_entry.key | replace: '_', '-' }}">
                 {{ additional_services_entry.display_name }}
             </a>
         </td>
         <td>
             {% assign other_attributes_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.other_attributes[i] %}
-            <a href="#{{include.carrier_interface}}---{{ other_attributes_entry.key | replace: '_', '-' }}">
+            <a href="#{{include.carrier_interface | replace: '_', '-' }}---{{ other_attributes_entry.key | replace: '_', '-' }}">
                 {{ other_attributes_entry.display_name }}
             </a>
         </td>
         <td>
             {% assign label_size_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.label_sizes[i] %}
-            <a href="#{{include.carrier_interface}}---{{ label_size_entry.key | replace: '_', '-' }}">
+            <a href="#{{include.carrier_interface | replace: '_', '-' }}---{{ label_size_entry.key | replace: '_', '-' }}">
                 {{ label_size_entry.display_name }}
             </a>
         </td>
