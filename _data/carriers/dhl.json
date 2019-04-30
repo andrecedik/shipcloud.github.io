@@ -6,6 +6,30 @@
             "display_name": "DHL Api V2.1",
             "implementations": {
                 "shipcloud": {
+                    "services": [
+                        {
+                            "display_name": "Standard",
+                            "key": "standard"
+                        },
+                        {
+                            "display_name": "Returns",
+                            "key": "returns"
+                        },
+                        {
+                            "display_name": "Europaket",
+                            "key": "dhl_europaket"
+                        }
+                    ],
+                    "package_types": [
+                        {
+                            "display_name": "Bulk shipments",
+                            "key": "bulk"
+                        },
+                        {
+                            "display_name":  "Parcel",
+                            "key": "parcel"
+                        }
+                    ],
                     "additional_services": [
                         {
                             "display_name": "Advance notice",
@@ -30,10 +54,34 @@
                         {
                             "display_name": "Ident Check",
                             "key": "dhl_ident_check"
+                        }
+                    ],
+                    "other_attributes": [
+                        {
+                            "display_name":  "Additional insurance",
+                            "key": "declared_value"
                         },
                         {
-                            "display_name": "Endorsment",
-                            "key": "dhl_endorsment"
+                            "display_name":  "Customs declaration",
+                            "key": "customs_declaration"
+                        },
+                        {
+                            "display_name":  "Packstation",
+                            "key": "packstation"
+                        },
+                        {
+                            "display_name":  "Postfiliale",
+                            "key": "postfiliale"
+                        }
+                    ],
+                    "label_sizes": [
+                        {
+                            "display_name":  "DIN A5",
+                            "key": "A5"
+                        },
+                        {
+                            "display_name": "DIN A6",
+                            "key": "A6"
                         }
                     ],
                     "field_lengths": {
@@ -56,51 +104,7 @@
                                 "hs_tariff_number": "1 - 10 characters"
                             }
                         }
-                    },
-                    "label_sizes": [
-                        {
-                            "display_name":  "DIN A5",
-                            "key": "A5"
-                        },
-                        {
-                            "display_name": "DIN A6",
-                            "key": "A6"
-                        }
-                    ],
-                    "other_attributes": [
-                        {
-                            "display_name":  "Additional insurance",
-                            "key": "declared_value"
-                        }
-                    ],
-                    "package_types": [
-                        {
-                            "display_name": "Bulk shipments",
-                            "key": "bulk"
-                        },
-                        {
-                            "display_name":  "Parcel",
-                            "key": "parcel"
-                        }
-                    ],
-                    "services": [
-                        {
-                            "display_name": "Standard",
-                            "key": "standard"
-                        },
-                        {
-                            "display_name": "Returns",
-                            "key": "returns"
-                        },
-                        {
-                            "display_name": "Europaket",
-                            "key": "dhl_europaket"
-                        },
-                        {
-                            "display_name":  "Taggleich",
-                            "key": "same_day"
-                        }
-                    ]
+                    }
                 }
             }
         }

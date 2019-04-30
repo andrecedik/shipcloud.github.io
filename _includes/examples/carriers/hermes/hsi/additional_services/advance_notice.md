@@ -1,2 +1,2 @@
-#### Advance notice
+#### Customer alert
 {: #hsi---advance-notice}
