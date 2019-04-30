@@ -1,11 +1,15 @@
-#### Advance notice
-{: #v2---advance-notice}
+#### Appointment announcement
+{: #{{include.carrier_interface}}---advance-notice}
 
-DHL currently only supports advance notice via email. 
+If you want the recipient to get a call from the carrier some time before the shipment will arrive
+at its destination you can specify the phone number of the recipient via our additional service
+advance_notice.
 
 __Requirements:__
 
 - `service` has to be _'standard'_
+- `package.type` can be _'disposable_pallet'_, _'euro_pallet'_ or
+  _'cargo_international_large_parcel'_
 
 <a class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{include.carrier_interface}}_advance_notice_togglebox_collapsable" aria-expanded="false" aria-controls="collapseExample">
   Show example
@@ -16,6 +20,7 @@ __Requirements:__
 {% highlight http %}
 POST https://api.shipcloud.io/v1/shipments
 {% endhighlight %}
+
 {% highlight json %}
 {
   "from": {
@@ -38,22 +43,25 @@ POST https://api.shipcloud.io/v1/shipments
     "country": "DE"
   },
   "package": {
-    "weight": 0.5,
-    "length": 20,
-    "width": 15,
-    "height": 5,
-    "type": "parcel"
+    "weight": 40,
+    "length": 1200,
+    "width": 800,
+    "height": 144,
+    "type": "euro_pallet"
   },
   "additional_services": [
     {
-      "name": "advance_notice",
-      "properties": {
-        "email": "test@example.com",
-        "language": "en"
+      "name": "advance_notice",  
+      "properties": {  
+        "phone": "015112345678"  
       }
     }
   ],
-  "carrier": "dhl",
+  "carrier": "cargo_international",
+  "service": "standard",
+  "description": "a short description of the shipment content",
+  "reference_number": "order's reference number",
+  "notification_email": "receiver@mail.com",
   "create_shipping_label": true
 }
 {% endhighlight %}

@@ -7,8 +7,9 @@ nav: carriers
 
 ## Supported carriers
 <ul>
-{% for carrier in site.shipcloud.supported_carriers.as_list %}
-  <li><a href="{{ carrier.key | prepend: site.baseurl }}" data-proofer-ignore>{{ carrier.name }}</a></li>
+{% assign carriers = site.data.carriers | sort %}
+{% for carrier in carriers %}
+  <li><a href="{{ carrier[1].key | prepend: site.baseurl }}" data-proofer-ignore>{{ carrier[1].display_name }}</a></li>
 {% endfor %}
 </ul>
 
