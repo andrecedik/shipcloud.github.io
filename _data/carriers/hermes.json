@@ -3,12 +3,12 @@
     "key": "hermes",
     "interfaces": {
         "props": {
-            "name": "Profi Paketservice",
+            "display_name": "Profi Paketservice",
             "implementations": {
                 "shipcloud": {
                     "additional_services": [
                         {
-                            "name": "Cash on delivery",
+                            "display_name": "Cash on delivery",
                             "key": "cash_on_delivery"
                         }
                     ],
@@ -24,27 +24,27 @@
                     },
                     "label_sizes": [
                         {
-                            "name":  "DIN A5",
+                            "display_name":  "DIN A5",
                             "key": "A5"
                         }
                     ],
                     "package_types": [
                         {
-                            "name": "Bulk shipments",
+                            "display_name": "Bulk shipments",
                             "key": "bulk"
                         },
                         {
-                            "name":  "Parcel",
+                            "display_name":  "Parcel",
                             "key": "parcel"
                         }
                     ],
                     "services": [
                         {
-                            "name": "Returns",
+                            "display_name": "Returns",
                             "key": "returns"
                         },
                         {
-                            "name":  "Standard",
+                            "display_name":  "Standard",
                             "key": "standard"
                         }
                     ]
@@ -52,20 +52,20 @@
             }
         },
         "hsi": {
-            "name": "Hermes Shipping Interface",
+            "display_name": "Hermes Shipping Interface",
             "implementations": {
                 "shipcloud": {
                     "additional_services": [
                         {
-                            "name": "Customer Alert",
+                            "display_name": "Customer Alert",
                             "key": "advance_notice"
                         },
                         {
-                            "name":  "IdentCheckService",
+                            "display_name":  "IdentCheckService",
                             "key": "hermes_ident_check"
                         },
                         {
-                            "name": "Next Day",
+                            "display_name": "Next Day",
                             "key": "hermes_next_day"
                         }
                     ],
@@ -81,31 +81,31 @@
                     },
                     "label_sizes": [
                         {
-                            "name":  "DIN A5",
+                            "display_name":  "DIN A5",
                             "key": "A5"
                         },
                         {
-                            "name": "DIN A6",
+                            "display_name": "DIN A6",
                             "key": "A6"
                         }
                     ],
                     "package_types": [
                         {
-                            "name": "Bulk shipments",
+                            "display_name": "Bulk shipments",
                             "key": "bulk"
                         },
                         {
-                            "name":  "Parcel",
+                            "display_name":  "Parcel",
                             "key": "parcel"
                         }
                     ],
                     "services": [
                         {
-                            "name": "Returns",
+                            "display_name": "Returns",
                             "key": "returns"
                         },
                         {
-                            "name":  "Standard",
+                            "display_name":  "Standard",
                             "key": "standard"
                         }
                     ]
