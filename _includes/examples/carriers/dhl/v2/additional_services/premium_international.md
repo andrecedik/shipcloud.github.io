@@ -10,17 +10,12 @@ __Requirements:__
 - You'll have to use your own DHL contract
 - Your DHL contract must be setup for DHL "Ship" (DHL "Versenden")
 
-<div class="panel-group" id="{{include.carrier_interface}}_premium_international_togglebox">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#{{include.carrier_interface}}_premium_international_togglebox" href="#{{include.carrier_interface}}_premium_international_togglebox_collapsable">
-          <i class="fas fa-chevron-down"></i> Example
-        </a>
-      </h4>
-    </div>
-    <div id="{{include.carrier_interface}}_premium_international_togglebox_collapsable" class="panel-collapse collapse">
-      <div class="panel-body">
+<a class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{include.carrier_interface}}_premium_international_togglebox" aria-expanded="false" aria-controls="collapseExample">
+  Show example
+</a>
+
+<div id="{{include.carrier_interface}}_premium_international_togglebox" class="panel-collapse collapse">
+<div class="well">
 {% highlight http %}
 POST https://api.shipcloud.io/v1/shipments
 {% endhighlight %}
@@ -63,7 +58,5 @@ POST https://api.shipcloud.io/v1/shipments
   "create_shipping_label": true
 }
 {% endhighlight %}
-      </div>
-    </div>
-  </div>
+</div>
 </div>
