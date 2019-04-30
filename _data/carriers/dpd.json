@@ -1,9 +1,9 @@
 {
-    "display_name": "DHL",
-    "key": "dhl",
+    "display_name": "DPD",
+    "key": "dpd",
     "interfaces": {
-        "v2": {
-            "display_name": "DHL Api V2.1",
+        "shipment_service_3_2": {
+            "display_name": "Shipment Service V3.2",
             "implementations": {
                 "shipcloud": {
                     "services": [
@@ -16,8 +16,12 @@
                             "key": "returns"
                         },
                         {
-                            "display_name": "Europaket",
-                            "key": "dhl_europaket"
+                            "display_name": "One day",
+                            "key": "one_day"
+                        },
+                        {
+                            "display_name": "One day early",
+                            "key": "one_day_early"
                         }
                     ],
                     "package_types": [
@@ -32,46 +36,22 @@
                     ],
                     "additional_services": [
                         {
-                            "display_name": "Advance notice",
+                            "display_name": "Predict",
                             "key": "advance_notice"
                         },
                         {
-                            "display_name": "Cash on delivery",
-                            "key": "cash_on_delivery"
+                            "display_name": "Drop authorization",
+                            "key": "drop_authorization"
                         },
                         {
-                            "display_name": "Visual age check",
-                            "key": "visual_age_check"
-                        },
-                        {
-                            "display_name": "Preferred delivery time",
-                            "key": "delivery_time"
-                        },
-                        {
-                            "display_name": "Premium international",
-                            "key": "premium_international"
-                        },
-                        {
-                            "display_name": "Ident Check",
-                            "key": "dhl_ident_check"
+                            "display_name": "Saturday delivery",
+                            "key": "saturday_delivery"
                         }
                     ],
                     "other_attributes": [
                         {
-                            "display_name":  "Additional insurance",
-                            "key": "declared_value"
-                        },
-                        {
-                            "display_name":  "Customs declaration",
-                            "key": "customs_declaration"
-                        },
-                        {
-                            "display_name":  "Packstation",
-                            "key": "packstation"
-                        },
-                        {
-                            "display_name":  "Postfiliale",
-                            "key": "postfiliale"
+                            "display_name":  "Parcel letter",
+                            "key": "parcel_letter"
                         }
                     ],
                     "label_sizes": [

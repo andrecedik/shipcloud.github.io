@@ -11,17 +11,12 @@ __Requirements:__
 - maximum dimensions (l/w/h): 120 x 60 x 60 cm
 - maximum weight: 31.5 kg
 
-<div class="panel-group" id="{{include.carrier_interface}}_dhl_europaket_togglebox">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#{{include.carrier_interface}}_dhl_europaket_togglebox" href="#{{include.carrier_interface}}_dhl_europaket_togglebox_collapsable">
-          <i class="fas fa-chevron-down"></i> Example
-        </a>
-      </h4>
-    </div>
-    <div id="{{include.carrier_interface}}_dhl_europaket_togglebox_collapsable" class="panel-collapse collapse">
-      <div class="panel-body">
+<a class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{include.carrier_interface}}_dhl_europaket_togglebox_collapsable" aria-expanded="false" aria-controls="collapseExample">
+  Show example
+</a>
+
+<div id="{{include.carrier_interface}}_dhl_europaket_togglebox_collapsable" class="panel-collapse collapse">
+<div class="well">
 {% highlight http %}
 POST https://api.shipcloud.io/v1/shipments
 {% endhighlight %}
@@ -59,7 +54,5 @@ POST https://api.shipcloud.io/v1/shipments
   "create_shipping_label": true
 }
 {% endhighlight %}
-      </div>
-    </div>
-  </div>
+</div>
 </div>
