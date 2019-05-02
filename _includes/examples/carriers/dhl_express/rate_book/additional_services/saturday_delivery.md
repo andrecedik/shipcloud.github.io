@@ -1,5 +1,5 @@
 #### Saturday delivery
-{: #shipment-service-3-2---saturday-delivery}
+{: #rate-book---saturday-delivery}
 
 When sending packages on a Friday you can specify that they should be delivered on Saturday (if
 the carrier supports this).
