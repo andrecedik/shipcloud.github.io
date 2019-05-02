@@ -58,7 +58,7 @@ POST https://api.shipcloud.io/v1/shipments
       }
     }
   ],
-  "carrier": "dhl",
+  "carrier": "{{page.carrier}}",
   "create_shipping_label": true
 }
 {% endhighlight %}

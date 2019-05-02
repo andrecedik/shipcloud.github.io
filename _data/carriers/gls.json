@@ -1,0 +1,96 @@
+{
+    "display_name": "GLS",
+    "key": "gls",
+    "interfaces": {
+        "uniship": {
+            "display_name": "Uniship",
+            "implementations": {
+                "shipcloud": {
+                    "services": [
+                        {
+                            "display_name": "Standard",
+                            "key": "standard"
+                        },
+                        {
+                            "display_name": "One day",
+                            "key": "one_day"
+                        }
+                    ],
+                    "package_types": [
+                        {
+                            "display_name": "Parcel",
+                            "key": "parcel"
+                        }
+                    ],
+                    "label_sizes": [
+                        {
+                            "display_name":  "DIN A5",
+                            "key": "A5"
+                        },
+                        {
+                            "display_name": "DIN A6",
+                            "key": "A6"
+                        }
+                    ]
+                }
+            }
+        },
+        "web_api": {
+            "display_name": "Web API",
+            "implementations": {
+                "shipcloud": {
+                    "services": [
+                        {
+                            "display_name": "Standard",
+                            "key": "standard"
+                        },
+                        {
+                            "display_name": "Returns",
+                            "key": "returns"
+                        }
+                    ],
+                    "package_types": [
+                        {
+                            "display_name": "Parcel",
+                            "key": "parcel"
+                        }
+                    ],
+                    "additional_services": [
+                        {
+                            "display_name": "Cash on delivery",
+                            "key": "cash_on_delivery"
+                        },
+                        {
+                            "display_name": "FlexDeliveryService",
+                            "key": "advance_notice"
+                        },
+                        {
+                            "display_name": "Guaranteed24Service",
+                            "key": "gls_guaranteed24service"
+                        }
+                    ],
+                    "other_attributes": [
+                        {
+                            "display_name":  "ShopDeliveryService",
+                            "key": "drop_off_point"
+                        },
+                        {
+                            "display_name":  "Incoterms",
+                            "key": "incoterms"
+                        }
+                    ],
+                    "label_sizes": [
+                        {
+                            "display_name":  "DIN A5",
+                            "key": "A5"
+                        },
+                        {
+                            "display_name": "DIN A6",
+                            "key": "A6"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

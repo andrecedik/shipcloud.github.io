@@ -1,4 +1,4 @@
 #### Standard
-{: #shipment-service-3-2---standard}
+{: #web-api---standard}
 
 {% include examples/carriers/services/standard.html carrier_interface=include.carrier_interface %}
