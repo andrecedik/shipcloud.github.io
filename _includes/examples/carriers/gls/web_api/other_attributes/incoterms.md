@@ -47,7 +47,7 @@ POST https://api.shipcloud.io/v1/shipments
     "type": "parcel"
   },
   "service": "standard",
-  "carrier": "gls",
+  "carrier": "{{page.carrier}}",
   "incoterm": "ddp",
   "create_shipping_label": true
 }

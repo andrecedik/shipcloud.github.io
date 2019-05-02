@@ -1,0 +1,75 @@
+{
+    "display_name": "UPS",
+    "key": "ups",
+    "interfaces": {
+        "ship_webservice": {
+            "display_name": "Ship Webservice",
+            "implementations": {
+                "shipcloud": {
+                    "services": [
+                        {
+                            "display_name": "Standard",
+                            "key": "standard"
+                        },
+                        {
+                            "display_name": "One day",
+                            "key": "one_day"
+                        },
+                        {
+                            "display_name": "One day early",
+                            "key": "one_day_early"
+                        },
+                        {
+                            "display_name": "Returns",
+                            "key": "returns"
+                        },
+                        {
+                            "display_name": "Express 12:00",
+                            "key": "ups_express_1200"
+                        }
+                    ],
+                    "package_types": [
+                        {
+                            "display_name":  "Parcel",
+                            "key": "parcel"
+                        }
+                    ],
+                    "additional_services": [
+                        {
+                            "display_name": "Cash on delivery",
+                            "key": "cash_on_delivery"
+                        },
+                        {
+                            "display_name": "Adult signature",
+                            "key": "ups_adult_signature"
+                        }
+                    ],
+                    "other_attributes": [
+                        {
+                            "display_name":  "Declared value",
+                            "key": "declared_value"
+                        },
+                        {
+                            "display_name":  "Customs declaration",
+                            "key": "customs_declaration"
+                        },
+                        {
+                            "display_name":  "Expedited",
+                            "key": "ups_expedited"
+                        }
+                    ],
+                    "label_sizes": [
+                        {
+                            "display_name":  "DIN A5",
+                            "key": "A5"
+                        },
+                        {
+                            "display_name": "DIN A6",
+                            "key": "A6"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

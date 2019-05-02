@@ -1,5 +1,5 @@
 #### Customs declaration
-{: #v2---customs-declaration}
+{: #ship-webservice---customs-declaration}
 
 If you want to send a shipment to a country where a customs declaration is necessary you can specify
 this the following way. Detailed information about the parameters can be found in our

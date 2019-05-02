@@ -72,7 +72,7 @@ POST https://api.shipcloud.io/v1/shipments
       }
     ]
   },
-  "carrier": "parcel_one",
+  "carrier": "{{page.carrier}}",
   "service": "standard",
   "create_shipping_label": true
 }

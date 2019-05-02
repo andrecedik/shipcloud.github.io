@@ -60,7 +60,7 @@ POST https://api.shipcloud.io/v1/shipments
     "type": "parcel"
   },
   "service": "standard",
-  "carrier": "gls",
+  "carrier": "{{page.carrier}}",
   "label": {
     "size": "A5"
   },
