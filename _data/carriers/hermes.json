@@ -8,12 +8,12 @@
                 "shipcloud": {
                     "services": [
                         {
-                            "display_name": "Returns",
-                            "key": "returns"
-                        },
-                        {
                             "display_name":  "Standard",
                             "key": "standard"
+                        },
+                        {
+                            "display_name": "Returns",
+                            "key": "returns"
                         }
                     ],
                     "package_types": [
@@ -57,12 +57,12 @@
                 "shipcloud": {
                     "services": [
                         {
-                            "display_name": "Returns",
-                            "key": "returns"
-                        },
-                        {
                             "display_name":  "Standard",
                             "key": "standard"
+                        },
+                        {
+                            "display_name": "Returns",
+                            "key": "returns"
                         }
                     ],
                     "package_types": [
