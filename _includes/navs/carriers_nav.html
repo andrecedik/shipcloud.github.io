@@ -17,13 +17,13 @@
             {% if detailed_services contains implementation_name %}
                 {% assign entries=site.data.carriers[page.carrier].interfaces.[interface_name].implementations.shipcloud.[implementation_name] %}
                 <li>
-                    <a href="#{{ interface_name | replace: '_', '-' }}-{{ implementation_name | replace: '_', '-' }}">
+                    <a href="#{{ interface_name | slugify }}-{{ implementation_name | slugify }}">
                         {{ implementation_name | replace: '_', ' ' | capitalize }}
                     </a>
                     <ul class="nav">
                         {% for entry in entries %}
                         <li>
-                            <a href="#{{ interface_name | replace: '_', '-' }}---{{ entry.key | replace: '_', '-' }}">
+                            <a href="#{{ interface_name | slugify }}---{{ entry.key | slugify }}">
                                 {{ entry.display_name }}
                             </a>
                         </li>
@@ -32,7 +32,7 @@
                 </li>
             {% else %}
                 <li>
-                    <a href="#{{ interface_name | replace: '_', '-' }}-{{ implementation_name | replace: '_', '-' }}">
+                    <a href="#{{ interface_name | slugify }}-{{ implementation_name | slugify }}">
                         {{ implementation_name  | replace: '_', ' ' | capitalize}}
                     </a>
                 </li>
