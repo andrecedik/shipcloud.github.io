@@ -13,12 +13,15 @@
 {% endfor %}
 {% assign largest_array_size = largest_array_size | minus: 1 %}
 
+{% assign additional_services_entries = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.additional_services %}
+{% assign other_attributes_entries = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.other_attributes %}
+
 <table class="table table-striped table-hover table-bordered">
     <tr>
         <th>Services</th>
         <th>Package types</th>
-        <th>Additional services</th>
-        <th>Other Attributes</th>
+        {% if additional_services_entries.size > 0 %}<th>Additional services</th>{% endif %}
+        {% if other_attributes_entries.size > 0 %}<th>Other Attributes</th>{% endif %}
         <th>Label sizes</th>
     </tr>
     {% for i in (0..largest_array_size) %}
@@ -35,18 +38,22 @@
                 {{ package_type_entry.display_name }}
             </a>
         </td>
+        {% if additional_services_entries.size > 0 %}
         <td>
             {% assign additional_services_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.additional_services[i] %}
             <a href="#{{include.carrier_interface | slugify }}---{{ additional_services_entry.key | slugify }}">
                 {{ additional_services_entry.display_name }}
             </a>
         </td>
+        {% endif %}
+        {% if other_attributes_entries.size > 0 %}
         <td>
             {% assign other_attributes_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.other_attributes[i] %}
             <a href="#{{include.carrier_interface | slugify }}---{{ other_attributes_entry.key | slugify }}">
                 {{ other_attributes_entry.display_name }}
             </a>
         </td>
+        {% endif %}
         <td>
             {% assign label_size_entry = site.data.carriers[page.carrier].interfaces[include.carrier_interface].implementations.shipcloud.label_sizes[i] %}
             <a href="#{{include.carrier_interface | slugify }}---{{ label_size_entry.key | slugify }}">
