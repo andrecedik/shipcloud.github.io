@@ -2,8 +2,13 @@
   font-family: arial, sans-serif;
 }
 
-.carrier-logo--table-header {
-  width: 80px;
+.carrier-logo {
+  &--overview {
+    max-width: 140px;
+  }
+  &--table-header {
+    width: 80px;
+  }
 }
 
 nav {
