@@ -42,7 +42,8 @@ POST https://api.shipcloud.io/v1/shipments
     "length": 20,
     "width": 15,
     "height": 5,
-    "type": "parcel"
+    "type": "parcel",
+    "description": "Important documents"
   },
   "carrier": "{{page.carrier}}",
   "service": "returns",
