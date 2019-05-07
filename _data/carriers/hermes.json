@@ -38,6 +38,12 @@
                             "key": "A5"
                         }
                     ],
+                    "misc": [
+                        {
+                            "display_name": "Cutoff times",
+                            "key": "cutoff_times"
+                        }
+                    ],
                     "field_lengths": {
                         "first_name": "0 - 30 caracters",
                         "last_name": "1 - 25 characters",
@@ -103,6 +109,12 @@
                         {
                             "display_name": "DIN A6",
                             "key": "A6"
+                        }
+                    ],
+                    "misc": [
+                        {
+                            "display_name": "Cutoff times",
+                            "key": "cutoff_times"
                         }
                     ],
                     "field_lengths": {

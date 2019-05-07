@@ -78,18 +78,16 @@
 {% include utils/carrier_interface_entry_iterator.md entries=entries type='package_types' carrier_interface=include.carrier_interface %}
 {% endif %}
 
-{% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.additional_services %}
-{% if entries.size > 0 %}
+{% if additional_services_entries.size > 0 %}
 ### Additional services
 {: #{{include.carrier_interface | slugify}}-additional-services}
-{% include utils/carrier_interface_entry_iterator.md entries=entries type='additional_services' carrier_interface=include.carrier_interface %}
+{% include utils/carrier_interface_entry_iterator.md entries=additional_services_entries type='additional_services' carrier_interface=include.carrier_interface %}
 {% endif %}
 
-{% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.other_attributes %}
-{% if entries.size > 0 %}
+{% if other_attributes_entries.size > 0 %}
 ### Other attributes
 {: #{{include.carrier_interface | slugify}}-other-attributes}
-{% include utils/carrier_interface_entry_iterator.md entries=entries type='other_attributes' carrier_interface=include.carrier_interface %}
+{% include utils/carrier_interface_entry_iterator.md entries=other_attributes_entries type='other_attributes' carrier_interface=include.carrier_interface %}
 {% endif %}
 
 {% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.label_sizes %}
@@ -97,6 +95,13 @@
 ### Label sizes
 {: #{{include.carrier_interface | slugify}}-label-sizes}
 {% include utils/carrier_interface_entry_iterator.md entries=entries %}
+{% endif %}
+
+{% assign misc_entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.misc %}
+{% if misc_entries.size > 0 %}
+### Misc
+{: #{{include.carrier_interface | slugify}}-field-lengths}
+{% include utils/carrier_interface_entry_iterator.md entries=misc_entries type='misc' carrier_interface=include.carrier_interface %}
 {% endif %}
 
 {% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.field_lengths %}
