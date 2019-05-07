@@ -97,10 +97,17 @@
 {% include utils/carrier_interface_entry_iterator.md entries=entries %}
 {% endif %}
 
+{% assign pickup_requests_entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.pickup_requests %}
+{% if pickup_requests_entries.size > 0 %}
+### Pickup Requests
+{: #{{include.carrier_interface | slugify}}-pickup-requests}
+{% include utils/carrier_interface_entry_iterator.md entries=pickup_requests_entries type='pickup_requests' carrier_interface=include.carrier_interface %}
+{% endif %}
+
 {% assign misc_entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.misc %}
 {% if misc_entries.size > 0 %}
 ### Misc
-{: #{{include.carrier_interface | slugify}}-field-lengths}
+{: #{{include.carrier_interface | slugify}}-misc}
 {% include utils/carrier_interface_entry_iterator.md entries=misc_entries type='misc' carrier_interface=include.carrier_interface %}
 {% endif %}
 
