@@ -68,7 +68,7 @@
 {% if entries.size > 0 %}
 ### Package types
 {: #{{include.carrier_interface | slugify}}-package-types}
-{% include utils/carrier_interface_entry_iterator.md entries=entries %}
+{% include utils/carrier_interface_entry_iterator.md entries=entries type='package_types' carrier_interface=include.carrier_interface %}
 {% endif %}
 
 {% assign entries=site.data.carriers[page.carrier].interfaces.[include.carrier_interface].implementations.shipcloud.additional_services %}
