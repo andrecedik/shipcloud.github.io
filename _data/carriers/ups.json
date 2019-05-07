@@ -72,6 +72,10 @@
                         {
                             "display_name": "Cutoff times",
                             "key": "cutoff_times"
+                        },
+                        {
+                            "display_name": "Rules",
+                            "key": "rules"
                         }
                     ],
                     "field_lengths": {
