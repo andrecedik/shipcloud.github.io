@@ -32,6 +32,12 @@
                             "key": "A6"
                         }
                     ],
+                    "misc": [
+                        {
+                            "display_name": "Tracking number",
+                            "key": "tracking_no"
+                        }
+                    ],
                     "field_lengths": {
                         "company": "0 - 20 characters",
                         "first_name": "0 - 20 characters",
