@@ -24,6 +24,12 @@
                             "key": "A5"
                         }
                     ],
+                    "pickup_requests": [
+                        {
+                            "display_name":  "Shipment with pickup request",
+                            "key": "shipment_with_pickup_request"
+                        }
+                    ],
                     "field_lengths": {
                         "last_name": "0 - 60 characters (firstname + last_name <= 60 characters)",
                         "company": "2 - 60 characters",

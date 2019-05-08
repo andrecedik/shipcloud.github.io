@@ -68,6 +68,16 @@
                             "key": "A6"
                         }
                     ],
+                    "misc": [
+                        {
+                            "display_name": "Cutoff times",
+                            "key": "cutoff_times"
+                        },
+                        {
+                            "display_name": "Rules",
+                            "key": "rules"
+                        }
+                    ],
                     "field_lengths": {
                         "company": "1 - 35 characters (only 30 characters will be printed on the label)",
                         "last_name": "1 - 35 characters (firstname + last_name <= 35 characters - only 30 characters will be printed on the label)",

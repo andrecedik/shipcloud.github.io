@@ -1,4 +1,4 @@
-#### Postfiliale
+#### Post office delivery (Postfiliale)
 {: #v2---postfiliale}
 
 When sending to a DHL post office the following parameters have to be defined:

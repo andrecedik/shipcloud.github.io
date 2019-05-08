@@ -1,0 +1,6 @@
+#### Cutoff times
+{: #hsi---cutoff-times}
+
+If the volume is below 2m<sup>3</sup>, you can request a pickup for the next day until 9pm the day
+before. If the volume exceeds this limit you'll have to request the pickup until 2pm the previous
+day.

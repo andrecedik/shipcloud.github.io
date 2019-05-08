@@ -1,4 +1,4 @@
-#### Packstation
+#### Parcel pickup station (Packstation)
 {: #v2---packstation}
 
 When sending to a DHL Packstation the following parameters have to be defined:
